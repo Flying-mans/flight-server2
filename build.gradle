@@ -28,6 +28,9 @@ dependencies {
     // 항공 데이터 수집용
     implementation 'org.jsoup:jsoup:1.15.3'
     implementation 'org.json:json:20220924'
+
+    // aop
+    implementation 'org.springframework.boot:spring-boot-starter-aop'
 }
 
 tasks.named('test') {
