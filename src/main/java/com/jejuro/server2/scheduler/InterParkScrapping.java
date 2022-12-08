@@ -1,5 +1,6 @@
 package com.jejuro.server2.scheduler;
 
+import com.jejuro.server2.aop.Timer;
 import com.jejuro.server2.entity.*;
 import com.jejuro.server2.repository.FlightRepository;
 import lombok.RequiredArgsConstructor;
@@ -25,6 +26,7 @@ public class InterParkScrapping {
     private final FlightRepository flightRepository;
     private int DATE_RANGE = 2;
 
+    @Timer
     @Scheduled(cron = "10 48 * * * *")
     public void crawlData() {
         LocalDate now = LocalDate.now();
